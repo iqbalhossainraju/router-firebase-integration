@@ -2,7 +2,6 @@ import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signO
 import { useEffect, useState } from 'react';
 import app from "../Firebase/firebase.init";
 
-
 const auth = getAuth(app);
 const GoogleProvider = new GoogleAuthProvider();
 
@@ -38,7 +37,7 @@ const useFirebase = () => {
     useEffect(() => {
         onAuthStateChanged(auth, user => {
             setUser(user);
-        })
+        });
     }, [])
 
 
